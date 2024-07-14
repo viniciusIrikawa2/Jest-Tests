@@ -22,6 +22,13 @@ describe('Utils test suite', () => {
             
             console.log('Actual test');
         });
+
+        it('Should throw error on invalid argument - function', () => {
+            function expectedError(){
+                const actual = sut.toUpperCase('');
+            }
+            expect(expectedError).toThrow();
+        });
     });
 
     it('should return uppercase', () => {
