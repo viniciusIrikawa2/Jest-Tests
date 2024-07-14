@@ -15,6 +15,18 @@ describe('Utils test suite', () => {
 
     });
 
+        // Parametrized tests
+        describe('ToUpperCase examples', () => {
+            it.each([
+                {input: 'abc', expected: 'ABC'},
+                {input: 'My-String', expected: 'MY-STRING'},
+                {input: 'def', expected: 'DEF'},
+            ])('$input toUpperCase should be $expected', ({input, expected}) => {
+                const actual = toUpperCase(input);
+                expect(actual).toBe(expected);
+            });
+        });
+    
     describe('getStringInfo for arg My-String should', () => {
         test('return right length', () => {
             const actual = getStringInfo('My-String');
