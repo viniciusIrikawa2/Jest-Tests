@@ -1,4 +1,4 @@
-import { PasswordChecker } from "../../app/PasswordChecker/PasswordChecker";
+import { PasswordChecker, PasswordErrors } from "../../app/PasswordChecker/PasswordChecker";
 
 describe('PasswordChecker test suite', () => {
     
@@ -9,33 +9,41 @@ describe('PasswordChecker test suite', () => {
     });
 
     it('Password with less than 8 chars is invalid', () => {
-        const act = sut.checkPassword('12345');
-        expect(act).toBe(false);
+        const act = sut.checkPassword('1234567');
+        expect(act.valid).toBe(false);
+        expect(act.reasons).toContain(PasswordErrors.SHORT);
     });
     
     it('Password with more than 8 chars is valid', () => {
-        const act = sut.checkPassword('12345678Aa');
-        expect(act).toBe(true);
+        const act = sut.checkPassword('12345678');
+        expect(act.reasons).not.toContain(PasswordErrors.SHORT);
     });
 
     it('Password with no upper case letter is invalid', () => {
-        const act = sut.checkPassword('1234abcd');
-        expect(act).toBe(false);
+        const act = sut.checkPassword('abcd');
+        expect(act.valid).toBe(false);
+        expect(act.reasons).toContain(PasswordErrors.NO_UPPER_CASE);
     });
-
+    
     it('Password with upper case letter is valid', () => {
-        const act = sut.checkPassword('1234abcdA');
-        expect(act).toBe(true);
+        const act = sut.checkPassword('abcD');
+        expect(act.reasons).not.toContain(PasswordErrors.NO_UPPER_CASE);
     });
 
     it('Password with no lower case letter is invalid', () => {
-        const act = sut.checkPassword('1234ABCD');
-        expect(act).toBe(false);
+        const act = sut.checkPassword('ABCD');
+        expect(act.reasons).toContain(PasswordErrors.NO_LOWER_CASE);
     });
 
     it('Password with lower case letter is valid', () => {
-        const act = sut.checkPassword('1234ABCDa');
-        expect(act).toBe(true);
+        const act = sut.checkPassword('ABCDa');
+        expect(act.reasons).not.toContain(PasswordErrors.NO_LOWER_CASE);
+    });
+
+    it('Complex password is valid', () => {
+        const act = sut.checkPassword('1234abcD');
+        expect(act.reasons).toHaveLength(0);
+        expect(act.valid).toBe(true);
     });
 
 });
