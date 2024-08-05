@@ -1,3 +1,5 @@
+import { v4 } from "uuid";
+
 export type StringInfo = {
     lowerCase: string,
     uppercase: string,
@@ -7,6 +9,14 @@ export type StringInfo = {
 }
 
 type LoggerServiceCallback = (arg: string) => void;
+
+export const toUpperCase = (arg: string) => {
+    return arg.toUpperCase();
+};
+
+export const toLowerCaseWithId = (arg: string) => {
+    return arg.toLowerCase() + v4();
+};
 
 export const calculateComplexity = (stringInfo: StringInfo) => {
     return Object.keys(stringInfo.extraInfo).length * stringInfo.length;
