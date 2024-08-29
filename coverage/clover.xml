@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1724715925109" clover="3.2.0">
-  <project timestamp="1724715925109" name="All files">
-    <metrics statements="17" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="11" elements="29" coveredelements="26" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
+<coverage generated="1724892760669" clover="3.2.0">
+  <project timestamp="1724892760669" name="All files">
+    <metrics statements="22" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="4" elements="37" coveredelements="13" complexity="0" loc="22" ncloc="22" packages="1" files="2" classes="2"/>
     <file name="DataBase.ts" path="C:\Users\vinic\OneDrive\Desktop\Projects\jest_lessons\src\app\server_app\data\DataBase.ts">
-      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="9" count="6" type="stmt"/>
-      <line num="12" count="8" type="stmt"/>
-      <line num="13" count="8" type="stmt"/>
-      <line num="14" count="8" type="stmt"/>
-      <line num="18" count="3" type="stmt"/>
-      <line num="22" count="2" type="stmt"/>
-      <line num="26" count="1" type="stmt"/>
-      <line num="27" count="1" type="stmt"/>
-      <line num="31" count="1" type="stmt"/>
-      <line num="32" count="1" type="stmt"/>
-      <line num="36" count="1" type="stmt"/>
+      <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <line num="1" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="31" count="0" type="stmt"/>
+      <line num="32" count="0" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
     </file>
-    <file name="IdGenerator.ts" path="C:\Users\vinic\OneDrive\Desktop\Projects\jest_lessons\src\app\server_app\data\IdGenerator.ts">
-      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="4" count="0" type="stmt"/>
-      <line num="5" count="0" type="stmt"/>
+    <file name="UserCredentialsDataAccess.ts" path="C:\Users\vinic\OneDrive\Desktop\Projects\jest_lessons\src\app\server_app\data\UserCredentialsDataAccess.ts">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
