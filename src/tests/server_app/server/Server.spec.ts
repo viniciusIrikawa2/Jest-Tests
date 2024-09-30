@@ -49,7 +49,10 @@ describe('Server test suite', () => {
     });
 
 
-    it('Should work by now', () => {
-        sut.startServer();
+    it('Should start the server on port 8080 and end the request', async () => {
+        await sut.startServer();
+
+        expect(serverMock.listen).toHaveBeenCalledWith(8080);
+        expect(responseMock.end).toHaveBeenCalledTimes(1);
     });
 });

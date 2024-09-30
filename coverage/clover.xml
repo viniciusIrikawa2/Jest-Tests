@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1727306610080" clover="3.2.0">
-  <project timestamp="1727306610080" name="All files">
+<coverage generated="1727740288535" clover="3.2.0">
+  <project timestamp="1727740288536" name="All files">
     <metrics statements="41" coveredstatements="23" conditionals="8" coveredconditionals="1" methods="9" coveredmethods="6" elements="58" coveredelements="30" complexity="0" loc="41" ncloc="41" packages="1" files="1" classes="1"/>
     <file name="Server.ts" path="C:\Users\vinic\OneDrive\Desktop\Projects\jest_lessons\src\app\server_app\server\Server.ts">
       <metrics statements="41" coveredstatements="23" conditionals="8" coveredconditionals="1" methods="9" coveredmethods="6"/>
