@@ -6,8 +6,8 @@ export class RequestTestWrapper{
     public url: string;
     public headers = {};
 
-    public on(ev, cb){
-        if(ev === 'data'){
+    public on(evt, cb){
+        if(evt === 'data'){
             cb(JSON.stringify(this.body));
         }else {
             cb();
